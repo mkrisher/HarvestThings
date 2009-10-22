@@ -57,13 +57,10 @@ class HarvestConfig
   end
 end
 EOS
-
-      # write to file
       File.open(@config_filename, 'w') {|f| f.write(str) }
     end
     
     def things_projects_to_harvest
-      # define harvest project names
       @harvest_project_names = []
       @harvest.projects.find(:all).each { |p| @harvest_project_names.push p.name.downcase }
       

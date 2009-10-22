@@ -10,7 +10,6 @@ HarvestThings has the following features:
 * supports exporting projects and tasks out of Things and importing 
   into Harvest
 
-
 == Installation
 
 === Gem Installation
@@ -36,10 +35,7 @@ from its distribution directory.
 === Source Repository
 
 HarvestThings is currently hosted at github. The github web page is
-http://github.com/mkrisher/HarvestThings/tree/master. The public git clone 
-URL is
-
-* git://github.com/mkrisher/HarvestThings.git
+* http://github.com/mkrisher/HarvestThings
 
 === Issues and Bug Reports
 
@@ -48,8 +44,6 @@ Bugs, features requests and other issues can be logged at
 * https://github.com/mkrisher/HarvestThings/tree/master
 
 
----
-
 = Other stuff
 
 Harvest[http://www.getharvest.com/]::  Harvest is the amazing time tracking app by Irridesco
@@ -57,6 +51,8 @@ Things[http://culturedcode.com]::   Things is the greatest task manager by Cultu
 
 I referenced the source code of Rake[http://github.com/jimweirich/rake] a lot 
 while creating this gem.
+
+I'm using aiaio's[http://aiaio.github.com/harvest/] excellent Ruby Wrapper for Harvest
 
 == Warranty
 
