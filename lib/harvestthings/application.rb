@@ -14,15 +14,11 @@ module HarvestThings
     CONFIG_PATH = "harvestthings/harvest/config.rb"
     
     def initialize
-      
       generate_config unless File.exists?(CONFIG_PATH)
-      
-      require "harvestthings/harvest/config"
-      
+      load "harvestthings/harvest/config.rb"
       @harvest = Harvest(HarvestConfig::attrs)
       @things = Things.new
-      
-      sync
+      sync if config_checks?
     end
     
     def sync
@@ -78,6 +74,17 @@ module HarvestThings
       client.attributes = {:name => area_name}
       client.save
       return client.id
+    end
+    
+    def config_checks?
+      begin
+        temp = @harvest.projects.find(:all)
+      rescue
+        puts "Harvest authorization issue, please enter your login information:"
+        generate_config
+        initialize
+      end
+      return temp.nil? ? false : true
     end
     
     def generate_config

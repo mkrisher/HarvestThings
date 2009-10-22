@@ -19,6 +19,7 @@ class Things
   #
   # @return [nil]
   def initialize
+    current_pwd = Dir.pwd 
     Dir.chdir() # changes to HOME environment variable
     Dir.chdir(DATABASE_PATH)
     if File.exists?(DATABASE_FILE)
@@ -27,6 +28,7 @@ class Things
     else
       raise SystemError, "can't find the default Things database file"
     end
+    Dir.chdir(current_pwd)
   end
 
   # load_database - loads the databse file into the xml property
