@@ -9,6 +9,12 @@ HarvestThings has the following features:
 
 * supports exporting projects and tasks out of Things and importing 
   into Harvest
+  
+Still to come....
+
+* syncing tasks from Things to Harvest
+* syncing Projects and Clients from Harvest to Things
+* syncing tasks from Harvest to Things
 
 == Installation
 
