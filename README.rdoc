@@ -27,7 +27,7 @@ You can download the source tarball of the latest version from
 
 Extract the tarball and run
 
-  % ruby harvestthings.rb
+  % cd lib; ruby harvestthings.rb
 
 from its distribution directory.
 
@@ -52,8 +52,11 @@ Bugs, features requests and other issues can be logged at
 
 = Other stuff
 
-Harvest::  Harvest is the amazing time tracking app by Irridesco
-Things::   Things is the greatest task manager by Culture Code
+Harvest[http://www.getharvest.com/]::  Harvest is the amazing time tracking app by Irridesco
+Things[http://culturedcode.com]::   Things is the greatest task manager by Culture Code
+
+I referenced the source code of Rake[http://github.com/jimweirich/rake] a lot 
+while creating this gem.
 
 == Warranty
 

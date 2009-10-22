@@ -27,9 +27,9 @@ module HarvestThings
     end
     
     def sync
-      puts "syncing"
-      puts "-------"
+      puts "syncing..."
       things_projects_to_harvest
+      puts "finished. ciao!"
     end
     
   private
