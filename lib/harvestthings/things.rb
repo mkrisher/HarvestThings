@@ -1,9 +1,6 @@
 require 'harvestthings/things/projects'
 require 'harvestthings/things/tasks'
 
-######################################################################
-# Things Application class.
-#
 class Things
   # include the projects mixin
   include Projects

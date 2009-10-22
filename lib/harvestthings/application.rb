@@ -23,28 +23,6 @@ module HarvestThings
       @harvest = Harvest(HarvestConfig::attrs)
       @things = Things.new
       
-      # puts "Harvest clients"
-      #       puts "---------------"
-      #       harvest_clients = @harvest.clients.find(:all)
-      #       harvest_clients.each do |c|
-      #         puts c.id.to_s << " " << c.name
-      #       end
-      #       
-      #       puts ""
-      #       puts "Harvest projects"
-      #       puts "----------------"
-      #       harvest_projects = @harvest.projects.find(:all)
-      #       harvest_projects.each do |p|
-      #         puts p.name.downcase
-      #       end
-      # 
-      #       puts ""
-      #       puts "Things projects"
-      #       puts "---------------"
-      #       @things.projects.each do |project_id|
-      #         puts @things.project_area(project_id).downcase << " >> " << @things.project_title(project_id).downcase
-      #       end
-      
       sync
     end
     

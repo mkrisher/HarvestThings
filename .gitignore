@@ -1,3 +1,2 @@
 .DS_Store
 lib/harvest/config.rb
-lib/harvest/config_back.rb
