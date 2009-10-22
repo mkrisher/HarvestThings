@@ -11,12 +11,11 @@ module HarvestThings
   class Application
     
     # define Harvest config file path
-    attr_reader :config_filename
+    CONFIG_PATH = "harvestthings/harvest/config.rb"
     
     def initialize
-      @config_filename = "harvestthings/harvest/config.rb"
       
-      generate_config unless File.exists?(@config_filename)
+      generate_config unless File.exists?(CONFIG_PATH)
       
       require "harvestthings/harvest/config"
       
@@ -33,32 +32,6 @@ module HarvestThings
     end
     
   private
-  
-    def generate_config
-      # define email
-      puts "enter the email you use to log into Harvest:"
-      email = gets
-      # define password
-      puts "enter the password for this Harvest account:"
-      password = gets
-      # define subdomain
-      puts "enter the subdomain for your Harvest account:"
-      subdomain = gets
-      
-      str = <<EOS
-class HarvestConfig
-  def self.attrs(overwrite = {})
-  {
-    :email      => "#{email.chomp!}", 
-    :password   => "#{password.chomp!}", 
-    :sub_domain => "#{subdomain.chomp!}",
-    :headers    => { "User-Agent" => "Harvest Rubygem" }
-  }.merge(overwrite)
-  end
-end
-EOS
-      File.open(@config_filename, 'w') {|f| f.write(str) }
-    end
     
     def things_projects_to_harvest
       @harvest_project_names = []
@@ -107,6 +80,32 @@ EOS
       return client.id
     end
     
-  end # Application
+    def generate_config
+      # define email
+      puts "enter the email you use to log into Harvest:"
+      email = gets
+      # define password
+      puts "enter the password for this Harvest account:"
+      password = gets
+      # define subdomain
+      puts "enter the subdomain for your Harvest account:"
+      subdomain = gets
+
+str = <<EOS
+class HarvestConfig
+  def self.attrs(overwrite = {})
+  {
+    :email      => "#{email.chomp!}", 
+    :password   => "#{password.chomp!}", 
+    :sub_domain => "#{subdomain.chomp!}",
+    :headers    => { "User-Agent" => "Harvest Rubygem" }
+  }.merge(overwrite)
+  end
+end
+EOS
+      File.open(CONFIG_PATH, 'w') {|f| f.write(str) }
+    end
+
+  end
   
 end
