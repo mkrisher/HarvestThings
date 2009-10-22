@@ -1,0 +1,63 @@
+= HarvestThings -- Harvest and Things syncing 
+
+Version: 0.0.1
+
+This package contains a simple ruby program used to sync Harvest and Things 
+via the Harvest RESTful API.
+
+HarvestThings has the following features:
+
+* supports exporting projects and tasks out of Things and importing 
+  into Harvest
+
+
+== Installation
+
+=== Gem Installation
+
+Download and install with the following.
+
+   gem install harvestthings
+
+=== Normal Installation
+
+You can download the source tarball of the latest version from
+
+* http://github.com/mkrisher/HarvestThings/tree/master
+
+Extract the tarball and run
+
+  % ruby harvestthings.rb
+
+from its distribution directory.
+
+== Development
+
+=== Source Repository
+
+HarvestThings is currently hosted at github. The github web page is
+http://github.com/mkrisher/HarvestThings/tree/master. The public git clone 
+URL is
+
+* git://github.com/mkrisher/HarvestThings.git
+
+=== Issues and Bug Reports
+
+Bugs, features requests and other issues can be logged at
+
+* https://github.com/mkrisher/HarvestThings/tree/master
+
+
+---
+
+= Other stuff
+
+Harvest::  Harvest is the amazing time tracking app by Irridesco
+Things::   Things is the greatest task manager by Culture Code
+
+== Warranty
+
+This software is provided "as is" and without any express or
+implied warranties, including, without limitation, the implied
+warranties of merchantibility and fitness for a particular
+purpose.
