@@ -41,7 +41,7 @@ HarvestThings is currently hosted at github. The github web page is
 
 Bugs, features requests and other issues can be logged at
 
-* https://github.com/mkrisher/HarvestThings/tree/master
+* http://github.com/mkrisher/HarvestThings
 
 
 = Other stuff
