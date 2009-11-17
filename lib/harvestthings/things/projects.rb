@@ -1,6 +1,3 @@
-######################################################################
-# Things Projects module object.
-#
 module Projects
   # projects - grab an array of the various project ids from the xml
   #

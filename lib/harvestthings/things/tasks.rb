@@ -1,6 +1,3 @@
-######################################################################
-# Things Tasks module object.
-#
 module Tasks
   # tasks - grab an array of the various task ids from the xml
   #

@@ -2,7 +2,7 @@
 
 #--
 
-# Copyright 2009 by Mike Krisher (mike@mikekrisher.com)
+# Copyright 2009 by Michael Krisher (mike@mikekrisher.com)
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to
@@ -34,6 +34,8 @@ begin
   require 'activeresource'
   gem "aiaio-active_resource_throttle", ">= 1.0.1"
   require 'active_resource_throttle'
+  require 'net/http'
+  require 'uri'
 rescue LoadError => e
   puts "there was an error loading a gem: #{e}"
 end

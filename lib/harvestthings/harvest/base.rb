@@ -49,6 +49,11 @@ module Harvest
     def tasks
       Harvest::Resources::Task
     end
+    
+    # Task Assignments.
+    def task_assignment
+      Harvest::Resources::TaskAssignment
+    end
 
     # Invoices
     def invoices
