@@ -1,6 +1,7 @@
 begin
-  require 'harvestthings/harvest.rb'
-  require 'harvestthings/things.rb'
+  require 'harvestthings/harvest'
+  require 'harvestthings/things'
+  require 'harvestthings/sync'
 rescue LoadError => e
   puts "there was an error loading a dependancy: #{e}"
 end
@@ -9,7 +10,8 @@ module HarvestThings
   
   class Application
     
-    require 'harvestthings/sync'
+    # include sync mixin
+    include Sync
     
     # define Harvest config file path
     CONFIG_PATH = "harvestthings/harvest/config.rb"
@@ -19,10 +21,10 @@ module HarvestThings
       load "harvestthings/harvest/config.rb"
       @harvest = Harvest(HarvestConfig::attrs)
       @things = Things.new
-      sync if config_checks?
+      init_sync if config_checks?
     end
     
-    def sync
+    def init_sync
       puts "syncing..."
       things_projects_to_harvest
       puts "finished. ciao!"

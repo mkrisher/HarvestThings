@@ -11,7 +11,7 @@ module Harvest
       end
       
       def tasks
-        task_class = Harvest::Resources::TaskAssignment.clone
+        task_class = Harvest::Resources::Task.clone
         task_class.project_id = self.id
         task_class
       end

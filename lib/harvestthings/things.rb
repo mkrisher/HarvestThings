@@ -17,7 +17,7 @@ class Things
   
   # initialize - change to the default Things directory and load the xml
   #
-  # @return [nil]
+  # @return [Boolean]
   def initialize
     current_pwd = Dir.pwd 
     Dir.chdir() # changes to HOME environment variable
@@ -33,7 +33,7 @@ class Things
 
   # load_database - loads the databse file into the xml property
   #
-  # @return [nil] 
+  # @return [Hpricot] 
   def load_database
     @xml = Hpricot.XML(open(DATABASE_FILE))
   end  

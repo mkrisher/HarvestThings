@@ -33,8 +33,9 @@ module Harvest
         # Location: /projects/#{project_id}/task_assignments/#{new_task_assignment_id}
         TaskAssignment::project_id = project_id
         TaskAssignment::set_site
+        puts "site: #{TaskAssignment::site}" 
       end
-                  
+                
     end
   end
 end
