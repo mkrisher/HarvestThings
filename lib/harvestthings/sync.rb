@@ -115,8 +115,8 @@ module Sync
     task_assignment = @harvest.task_assignment.new(:id => task.id.to_i)
     task_assignment.create_assignment(harvest_project_id(project))
     #puts task_assignment.to_xml
-    puts "#{task_assignment.to_xml}"
-    res = task_assignment.save
+    puts "#{task_assignment.to_xml(:skip_instruct => true).to_s}"
+    res = task_assignment.post task_assignment.to_xml(:skip_instruct => true).to_s
     puts "task_assignment.save: #{res}"
   end
 
