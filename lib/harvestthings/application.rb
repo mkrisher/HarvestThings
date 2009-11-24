@@ -1,7 +1,3 @@
-#
-# TODO: use the config file
-#
-
 begin
   require 'harvestthings/harvest'
   require 'harvestthings/things'

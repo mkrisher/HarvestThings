@@ -1,4 +1,3 @@
-
 ########################################################################
 #
 # The full HARVEST API documentation can be found at:
@@ -26,8 +25,8 @@ class Harvest
     generate_config unless File.exists?(CONFIG_PATH)
     load CONFIG_PATH
     
-    @company             = HarvestConfig::subdomain
-    @preferred_protocols = [HarvestConfig::has_ssl, ! HarvestConfig::ssl]
+    @company             = HarvestConfig.attrs[:subdomain]
+    @preferred_protocols = [HarvestConfig.attrs[:has_ssl], ! HarvestConfig.attrs[:has_ssl]]
     connect!
   end
 
@@ -49,7 +48,7 @@ def self.attrs(overwrite = {})
 {
   :email      => "#{email.chomp!}", 
   :password   => "#{password.chomp!}", 
-  :sub_domain => "#{subdomain.chomp!}",
+  :subdomain => "#{subdomain.chomp!}",
   :has_ssl    => false,
   :user_agent => "Ruby/HarvestThings"
 }.merge(overwrite)
@@ -76,12 +75,12 @@ EOS
       "Authorization" => "Basic #{auth_string}",
 
       # Tell Harvest a bit about your application.
-      "User-Agent"    => HarvestConfig::user_agent
+      "User-Agent"    => HarvestConfig.attrs[:user_agent]
     }
   end
 
   def auth_string
-    Base64.encode64("#{HarvestConfig::email}:#{HarvestConfig::password}").delete("\r\n")
+    Base64.encode64("#{HarvestConfig.attrs[:email]}:#{HarvestConfig.attrs[:password]}").delete("\r\n")
   end
 
   def request path, method = :get, body = ""
