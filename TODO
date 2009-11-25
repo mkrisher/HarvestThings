@@ -1,5 +1,5 @@
 =begin
   TODO start process of packaging as a gem
   TODO add redundant checking, allowing same project name for two clients in Harvest
-  TODO inject Things tasks into Harvest for correct project
+  TODO support newer versions of Things database schema
 =end
