@@ -1,0 +1,13 @@
+begin
+  require 'jeweler'
+  Jeweler::Tasks.new do |gemspec|
+    gemspec.name = "harvestthings"
+    gemspec.summary = "push projects and tasks from Things into Harvest"
+    gemspec.description = "If you are using Things for mac and Harvest, avoid adding clients, projects, and tasks in two places, sync them with this gem"
+    gemspec.email = "mike@mikekrisher.com"
+    gemspec.homepage = "http://github.com/mkrisher/harvestthings"
+    gemspec.authors = ["Michael Krisher"]
+  end
+rescue LoadError
+  puts "Jeweler not available. Install it with: sudo gem install jeweler"
+end

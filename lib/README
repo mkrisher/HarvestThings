@@ -1,0 +1,71 @@
+HarvestThings
+=============
+
+HarvestThings is a Ruby Gem that syncs clients, projects, and tasks from 
+Things for Mac and pushed them into Harvest–the best time tracking utility out 
+there. 
+
+To learn more about Things:
+[http://culturedcode.com/things/][]
+
+To learn more about Harvest:
+[http://www.getharvest.com/][]
+
+
+The source for this gem is located on Github:
+[http://github.com/mkrisher/harvestthings/][]
+
+The gem can be installed from gemcutter using:
+`gem install harvestthings`
+
+Details
+=======
+
+Harvest is an amazing web based time tracking utility from Iridesco. They 
+offer a clean Web interface, a Dashboard widget, and an API. However, I didn't 
+want to have to retype all of my clients, projects, and tasks twice. I was 
+already keeping track of all of these items in Things for Mac. And when 
+recording time, I want to record against the actual task from Things that I 
+was working on. So, this gem was created as a way to take the project and tasks
+from Things and push them into Harvest via the API. 
+
+A typical workflow then becomes. Task gets created in Things and assigned to a 
+project. That project belongs to an area of responsibility. Syncing to Harvest 
+can become really easy. This gem assumes that "Areas of Responsibility" in 
+Things represent "clients" in Harvest. Projects in Things are projects in 
+Harvest. Tasks belong to projects whether in Things or Harvest. The image 
+below shows how these three items match up.
+
+
+The QUnit overlay looks like this in the browser:
+
+[![](http://img.skitch.com/20091125-jptpbxfbcg4irp81ytnwf3fkxf.jpg)](http://img.skitch.com/20091125-jptpbxfbcg4irp81ytnwf3fkxf.jpg)
+
+
+Requirements
+=======
+
+The HarvestThings gem requires a few other gems and libraries in order to make 
+the API calls:
+
+-hpricot
+-net/http
+-net/http
+-uri
+-base64
+-bigdecimal
+-date
+-time
+-jcode
+
+Usage
+=====
+
+
+
+
+Copyright (c) 2009 Michael Krisher, released under the MIT license
+
+[http://culturedcode.com/things/]: http://culturedcode.com/things/
+[http://www.getharvest.com/]: http://www.getharvest.com/
+[http://github.com/mkrisher/harvestthings/]: http://github.com/mkrisher/harvestthings/

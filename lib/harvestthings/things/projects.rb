@@ -6,9 +6,19 @@ module Projects
   def projects
     # find all projects from the first OBJECT node
     first_obj = @xml.at('object')
-    first_obj.search("relationship[@destination='TODO']") do |elem|
-      return elem.attributes["idrefs"].to_s.split(" ")
+    
+    if first_obj.search("relationship[@destination='TODO']").length != 0 
+      first_obj.search("relationship[@destination='TODO']") do |elem| # older versions of Things
+          return elem.attributes["idrefs"].to_s.split(" ")
+        end
+      else
+        first_obj.search("relationship[@destination='THING']") do |elem| # newer versions of Things
+          if elem.attributes["name"] == "children"
+            return elem.attributes["idrefs"].to_s.split(" ")
+          end
+        end
     end
+    
   end
   
   # project - grab the Hpricot element of the project using the id  

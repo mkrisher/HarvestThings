@@ -30,10 +30,6 @@ begin
   require 'rubygems'
   gem "hpricot", ">= 0.8.1"
   require 'hpricot'
-  gem "activeresource", ">= 2.3.2"
-  require 'activeresource'
-  gem "aiaio-active_resource_throttle", ">= 1.0.1"
-  require 'active_resource_throttle'
   require 'net/http'
   require 'uri'
 rescue LoadError => e

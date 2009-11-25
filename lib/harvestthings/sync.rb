@@ -12,7 +12,6 @@ module Sync
       name = @things.project_title(project).downcase
       client = @things.project_area(project).downcase
       client_id = harvest_client?(client) ? harvest_client_id(client) : add_client_to_harvest(client)
-      
       add_project_to_harvest(name, client_id) unless harvest_project?(name)
       things_tasks_to_harvest(project)
     end
