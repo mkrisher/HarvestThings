@@ -52,15 +52,15 @@ Requirements
 The HarvestThings gem requires a few other gems and libraries in order to make 
 the API calls:
 
--hpricot
--net/http
--net/http
--uri
--base64
--bigdecimal
--date
--time
--jcode
+* hpricot
+* net/http
+* net/http
+* uri
+* base64
+* bigdecimal
+* date
+* time
+* jcode
 
 Usage
 =====
@@ -75,7 +75,7 @@ harvestthings
 TODO
 ====
 * add tests
-
+* support the new database schema
 
 
 Copyright (c) 2009 Michael Krisher, released under the MIT license
