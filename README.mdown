@@ -37,17 +37,14 @@ Things represent "clients" in Harvest. Projects in Things are projects in
 Harvest. Tasks belong to projects whether in Things or Harvest. The image 
 below shows how these three items match up.
 
-
-The QUnit overlay looks like this in the browser:
-
 [![](http://img.skitch.com/20091125-jptpbxfbcg4irp81ytnwf3fkxf.jpg)](http://img.skitch.com/20091125-jptpbxfbcg4irp81ytnwf3fkxf.jpg)
 
 
 Requirements
 =======
 
-The HarvestThings gem requires a few other gems and libraries in order to make 
-the API calls:
+The HarvestThings Ruby Gem requires a few other gems and libraries in order to make 
+the API calls (other gems are not listed as dependents):
 
 * hpricot
 * net/http
@@ -61,7 +58,7 @@ the API calls:
 
 Usage
 =====
-as a gem
+as a Ruby Gem
 
 
     rquire rubygems
