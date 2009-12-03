@@ -12,9 +12,11 @@ module Projects
           return elem.attributes["idrefs"].to_s.split(" ")
         end
       else
-        first_obj.search("relationship[@destination='THING']") do |elem| # newer versions of Things
-          if elem.attributes["name"] == "children"
-            return elem.attributes["idrefs"].to_s.split(" ")
+        @xml.search("attribute[@name='title']") do |elem| # newer versions of Things
+          if elem.html == "Projects"
+            elem.parent.search("relationship[@name='focustodos']") do |e|
+              return e.attributes["idrefs"].to_s.split(" ")
+            end
           end
         end
     end

@@ -2,9 +2,6 @@ HarvestThings
 =============
 
 
-* NOTE: Newer versions of Things have a different database schema, I'm working 
-to add support
-
 HarvestThings is a Ruby Gem that syncs clients, projects, and tasks from 
 Things for Mac and pushed them into Harvest–the best time tracking utility out 
 there. 
@@ -75,7 +72,6 @@ as a gem
 TODO
 ====
 * add tests
-* support the new database schema
 
 
 Copyright (c) 2009 Michael Krisher, released under the MIT license

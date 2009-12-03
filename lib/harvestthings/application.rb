@@ -28,7 +28,7 @@ module HarvestThings
     def init_sync
       print "starting sync"
       things_projects_to_harvest
-      puts "finished. ciao!"
+      puts ".finished. ciao!"
     end
     
   private
