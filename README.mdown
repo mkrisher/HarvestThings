@@ -66,11 +66,11 @@ Usage
 =====
 as a gem
 
-`
-rquire rubygems
-require harvestthings
-harvestthings
-`
+
+    rquire rubygems
+    require harvestthings
+    harvestthings
+
 
 TODO
 ====
