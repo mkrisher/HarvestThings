@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Michael Krisher"]
-  s.date = %q{2009-11-25}
+  s.date = %q{2009-12-03}
   s.description = %q{harvestthings will sync your clients, projects, and tasks between Things and Harvest, where areas in Things correspond to clients in Harvest}
   s.email = %q{mike@mikekrisher.com}
   s.extra_rdoc_files = [
@@ -22,13 +22,15 @@ Gem::Specification.new do |s|
      "Rakefile",
      "TODO",
      "VERSION",
+     "harvestthings.gemspec",
      "lib/harvestthings.rb",
      "lib/harvestthings/application.rb",
      "lib/harvestthings/harvest.rb",
      "lib/harvestthings/sync.rb",
      "lib/harvestthings/things.rb",
      "lib/harvestthings/things/projects.rb",
-     "lib/harvestthings/things/tasks.rb"
+     "lib/harvestthings/things/tasks.rb",
+     "pkg/harvestthings-0.1.0.gem"
   ]
   s.homepage = %q{http://github.com/mkrisher/HarvestThings}
   s.rdoc_options = ["--charset=UTF-8"]

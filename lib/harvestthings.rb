@@ -40,6 +40,7 @@ require 'harvestthings/application'
 
 def harvestthings
   HarvestThings::Application.new
+  return true
 end
 
 

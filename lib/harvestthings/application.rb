@@ -29,7 +29,6 @@ module HarvestThings
       print "starting sync"
       things_projects_to_harvest
       puts "finished. ciao!"
-      exit
     end
     
   private
