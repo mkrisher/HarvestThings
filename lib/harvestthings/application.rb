@@ -26,9 +26,10 @@ module HarvestThings
     #
     # @return [String]
     def init_sync
-      puts "starting sync..."
+      print "starting sync"
       things_projects_to_harvest
       puts "finished. ciao!"
+      exit
     end
     
   private

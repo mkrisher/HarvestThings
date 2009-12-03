@@ -63,7 +63,14 @@ the API calls:
 
 Usage
 =====
+as a gem
 
+`require harvestthings`
+`harvestthings`
+
+TODO
+====
+* add tests
 
 
 

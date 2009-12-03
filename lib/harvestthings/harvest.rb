@@ -19,7 +19,7 @@ require 'time'
 class Harvest
 
   # define Harvest config file path
-  CONFIG_PATH = "harvestthings/harvest/config.rb"
+  CONFIG_PATH = "lib/harvestthings/harvest/config.rb"
   
   def initialize
     generate_config unless File.exists?(CONFIG_PATH)
@@ -55,6 +55,8 @@ def self.attrs(overwrite = {})
 end
 end
 EOS
+  puts Dir.pwd
+  
     File.open(CONFIG_PATH, 'w') {|f| f.write(str) }
   end
   

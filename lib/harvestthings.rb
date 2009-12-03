@@ -37,7 +37,10 @@ rescue LoadError => e
 end
 
 require 'harvestthings/application'
-HarvestThings::Application.new
+
+def harvestthings
+  HarvestThings::Application.new
+end
 
 
 
