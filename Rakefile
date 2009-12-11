@@ -12,7 +12,6 @@ begin
     gemspec.homepage = "http://github.com/bjhess/HarvestThings"
     gemspec.authors = ["Barry Hess"]
     gemspec.add_dependency('hpricot', '>= 0.8.1')
-    gemspec.add_dependency('jcode')
   end
 rescue LoadError
   puts "Jeweler not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"
