@@ -19,7 +19,7 @@ require 'time'
 class Harvest
 
   # define Harvest config file path
-  CONFIG_PATH = File.join(Dir.pwd, "harvestthings", "harvest", "config.rb")
+  CONFIG_PATH = File.join("~", ".harvestthingsrc")
   
   def initialize
     generate_config unless File.exists?(CONFIG_PATH)
