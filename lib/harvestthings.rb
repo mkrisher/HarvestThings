@@ -27,8 +27,6 @@ HARVESTTHINGSVERSION = '0.0.1'
 
 # load gem dependancies
 begin
-  require 'rubygems'
-  gem "hpricot", ">= 0.8.1"
   require 'hpricot'
   require 'net/http'
   require 'uri'
