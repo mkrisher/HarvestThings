@@ -36,7 +36,6 @@ module Sync
   # @param [str] - the Harvest client id
   # @return [Boolean]
   def add_project_to_harvest(proj_name, client)
-    puts "   adding #{proj_name} to Harvest"
 str = <<EOS
   <project>
      <name>#{proj_name}</name>
@@ -50,6 +49,8 @@ str = <<EOS
   </project>
 EOS
     response = @harvest.request '/projects', :post, str
+    # redefine harvest projects, since we've added to it
+    define_harvest_projects
   end
 
   # add_task_to_harvest - saves a Things task as a Harvest task  
