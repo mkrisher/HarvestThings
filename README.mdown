@@ -48,7 +48,6 @@ the API calls (other gems are not listed as dependents):
 
 * hpricot
 * net/http
-* net/http
 * uri
 * base64
 * bigdecimal
@@ -61,7 +60,7 @@ Usage
 as a Ruby Gem
 
 
-    rquire rubygems
+    require rubygems
     require harvestthings
     harvestthings
 
