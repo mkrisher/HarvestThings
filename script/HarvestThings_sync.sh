@@ -1,5 +1,13 @@
 #!/bin/sh
 
+if [ ! -f ~/.harvestthingsrc ]
+then
+  echo "Installing Harvest Things sync tool..."
+  sudo gem install harvestthings
+  echo "Done installing Harvest Things sync tool"
+fi
+
+
 # Ruby gems always available
 export RUBYOPT="rubygems"
 
