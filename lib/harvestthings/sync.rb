@@ -97,7 +97,8 @@ str = <<EOS
     <details></details>
   </client> 
 EOS
-    response = @harvest.request '/clients', :post, str 
+    response = @harvest.request '/clients', :post, str
+    define_harvest_clients
   end
 
 
