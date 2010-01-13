@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Michael Krisher"]
-  s.date = %q{2009-12-16}
+  s.date = %q{2010-01-13}
   s.description = %q{harvestthings will sync your clients, projects, and tasks between Things and Harvest, where areas in Things correspond to clients in Harvest}
   s.email = %q{mike@mikekrisher.com}
   s.extra_rdoc_files = [

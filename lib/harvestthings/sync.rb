@@ -84,6 +84,7 @@ str = <<EOS
   </task>
 EOS
     response = @harvest.request "/projects/#{harvest_project_id(project_name)}/task_assignments", :post, str
+    define_harvest_tasks
   end
 
   # add_client_to_harvest - saves a Things area_name as a Harvest client  
@@ -163,7 +164,7 @@ private
   def harvest_project?(proj_name)
     match = false
     @harvest_projects.each do |project|
-      if project['name'] == proj_name
+      if project['name'].downcase.strip == proj_name.downcase.strip
         match = true
       end
     end
@@ -177,7 +178,7 @@ private
   def harvest_client?(area_name)
     match = false
     @harvest_clients.each do |client|
-      if client['name'] == area_name
+      if client['name'].downcase.strip == area_name.downcase.strip
         match = true
       end
     end
@@ -191,7 +192,7 @@ private
   def harvest_task?(task_name)
     match = false
     @harvest_tasks.each do |task|
-      if task['name'] == task_name
+      if task['name'].downcase.strip == task_name.downcase.strip
         match = true
       end
     end
